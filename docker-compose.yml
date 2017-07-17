@@ -4,8 +4,12 @@ services:
    gitlab:
       image: gitlab/gitlab-ce:latest
       restart: always
-      ports: 
+      ports:
          - 0.0.0.0:80:80
          - 0.0.0.0:443:443
-         - 0.0.0.0:22:22
+         - 0.0.0.0:2222:22
       container_name: gitlab
+      volumes:
+         - ./gitlab/config:/etc/gitlab
+         - ./gitlab/logs:/var/logs/gitlab
+         - ./gitlab/data:/var/opt/gitlab
