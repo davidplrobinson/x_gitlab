@@ -1,0 +1,22 @@
+version: '2'
+services:
+ lb:
+   image: m21lab/haproxy:1.6.2
+   links:
+     - letsencrypt
+   volumes_from:
+     - letsencrypt
+ letsencrypt:
+   image: m21lab/letsencrypt:1.0
+   environment:
+     DOMAINS: '{fqdn goes here}'
+     EMAIL: '{email address goes here}'
+     LOAD_BALANCER_SERVICE_NAME: 'lb'
+     OPTIONS: '--staging'
+ registry:
+   volumes_from:
+     - letsencrypt:ro
+   environment:
+     REGISTRY_HTTP_SECRET: "secret_{random secret goes here}"
+     REGISTRY_HTTP_TLS_CERTIFICATE: /etc/letsencrypt/live/{fqdn goes here}/fullchain.pem
+     REGISTRY_HTTP_TLS_KEY: /etc/letsencrypt/live/{fqdn goes here}/privkey.pem

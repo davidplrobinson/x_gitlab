@@ -1,0 +1,32 @@
+=============== Jul 18, 2017 (UTC) ===============
+04:53:50.037149 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:53:50.047714 db@open opening
+04:53:50.052946 version@stat F·[] S·0B[] Sc·[]
+04:53:50.057832 db@janitor F·2 G·0
+04:53:50.057922 db@open done T·10.198715ms
+04:54:52.525571 db@close closing
+04:54:52.526044 db@close done T·373.478µs
+=============== Jul 18, 2017 (UTC) ===============
+04:54:52.818173 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:54:52.819826 version@stat F·[] S·0B[] Sc·[]
+04:54:52.819853 db@open opening
+04:54:52.819935 journal@recovery F·1
+04:54:52.827102 journal@recovery recovering @1
+04:54:52.846461 memdb@flush created L0@2 N·1307 S·159KiB "\x04db\x06db0,v70":"\x1cgo..8.1,v99"
+04:54:52.850050 version@stat F·[1] S·159KiB[159KiB] Sc·[0.25]
+04:54:52.850775 db@janitor F·3 G·0
+04:54:52.850793 db@open done T·30.933949ms
+05:37:44.125340 db@close closing
+05:37:44.127390 db@close done T·2.045268ms
+=============== Jul 18, 2017 (UTC) ===============
+05:52:10.422787 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+05:52:10.425137 version@stat F·[1] S·159KiB[159KiB] Sc·[0.25]
+05:52:10.425164 db@open opening
+05:52:10.425245 journal@recovery F·1
+05:52:10.433684 journal@recovery recovering @3
+05:52:10.478030 memdb@flush created L0@5 N·43 S·17KiB "\x06cmd\x06set,v1323":"\x10in..187,v1312"
+05:52:10.482053 version@stat F·[2] S·177KiB[177KiB] Sc·[0.50]
+05:52:10.487188 db@janitor F·4 G·0
+05:52:10.487216 db@open done T·62.042218ms
+05:52:24.014612 db@close closing
+05:52:24.014632 db@close done T·20.168µs
